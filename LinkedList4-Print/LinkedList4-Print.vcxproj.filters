@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="add_last.c">
+    <ClCompile Include="print_list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
