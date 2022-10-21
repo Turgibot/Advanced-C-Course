@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson1.1-Union", "Lesson1.1-Union\Lesson1.1-Union.vcxproj", "{CE067D04-8098-49A1-B6A7-29E688950DA5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson1.1", "Lesson1.1-Union\Lesson1.1-Union.vcxproj", "{CE067D04-8098-49A1-B6A7-29E688950DA5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson1.2-UnionExample2", "Lesson1.2-UnionExample2\Lesson1.2-UnionExample2.vcxproj", "{712D064A-33EB-45B6-9CB3-1C1B62840C21}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson1.2", "Lesson1.2-UnionExample2\Lesson1.2-UnionExample2.vcxproj", "{712D064A-33EB-45B6-9CB3-1C1B62840C21}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson1.3", "Lesson1.3\Lesson1.3.vcxproj", "{8E00EEB8-0C79-4230-B2A5-8F044EE7D243}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson1.4", "Lesson1.1\Lesson1.1.vcxproj", "{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{8E00EEB8-0C79-4230-B2A5-8F044EE7D243}.Release|x64.Build.0 = Release|x64
 		{8E00EEB8-0C79-4230-B2A5-8F044EE7D243}.Release|x86.ActiveCfg = Release|Win32
 		{8E00EEB8-0C79-4230-B2A5-8F044EE7D243}.Release|x86.Build.0 = Release|Win32
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Debug|x64.ActiveCfg = Debug|x64
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Debug|x64.Build.0 = Debug|x64
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Debug|x86.ActiveCfg = Debug|Win32
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Debug|x86.Build.0 = Debug|Win32
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Release|x64.ActiveCfg = Release|x64
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Release|x64.Build.0 = Release|x64
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Release|x86.ActiveCfg = Release|Win32
+		{D217FC2E-A2D7-4EC3-97CD-4D191CBF549E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

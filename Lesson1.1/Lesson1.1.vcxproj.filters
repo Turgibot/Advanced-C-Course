@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="union_example3.c">
+    <ClCompile Include="union_example4.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
