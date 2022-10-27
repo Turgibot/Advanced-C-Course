@@ -34,13 +34,6 @@ Node* addLast(Node* head, char* name, int id, int number)
 	return head;
 }
 
-void freeList(Node* head) {
-	while (head) {
-		Node* tmp = head->next;
-		free(head);
-		head = tmp;
-	}
-}
 void print(Node* head)
 {
 	Node* tmp;
