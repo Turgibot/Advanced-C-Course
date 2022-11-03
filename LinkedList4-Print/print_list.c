@@ -61,8 +61,9 @@ void printRec1(Node* head) {
 }
 
 int freeList(Node* head) {
+	Node* tmp;
 	while (head) {
-		Node* tmp = head->next;
+		tmp = head->next;
 		free(head);
 		head = tmp;
 	}
