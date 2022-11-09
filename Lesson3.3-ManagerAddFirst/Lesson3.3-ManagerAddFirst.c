@@ -45,7 +45,8 @@ void addLast(DLList* list, int data)
     list->tail = newnode;
 }
 
-void freeList(Node* head) {
+void freeList(DLList list) {
+    Node* head = list.head;
     while (head) {
         Node* tmp = head->next;
         free(head);
@@ -53,17 +54,6 @@ void freeList(Node* head) {
     }
 }
 
-void printBackwards(Node* tail)
-{
-    Node* tmp;
-    tmp = tail;
-    printf("\nPrinting a list: ");
-    while (tmp != NULL)
-    {
-        printf("%d  ", tmp->value);
-        tmp = tmp->prev;
-    }
-}
 void printBackwardsRec(Node* tail)
 {
     if (tail == NULL)
@@ -79,6 +69,14 @@ void printListRec(Node* head)
     printListRec(head->next);
 }
 
+void printList(DLList list, int isForward) {
+    if (isForward) {
+        printListRec(list.head);
+    }
+    else {
+        printBackwardsRec(list.tail);
+    }
+}
 
 void addFirst(DLList* list, int data)
 {
@@ -102,10 +100,12 @@ int main()
 {
     DLList ddlist = { NULL, NULL };
 
-    addLast(&ddlist, 10);
-    addLast(&ddlist, 20);
-    addLast(&ddlist, 30);
+    addFirst(&ddlist, 10);
+    addFirst(&ddlist, 20);
+    addFirst(&ddlist, 30);
 
-    printListRec(ddlist.head);
-    freeList(ddlist.head);
+    printList(ddlist, 1);
+    printf("\n---------------\n");
+    printList(ddlist, 0);
+    freeList(ddlist);
 }
