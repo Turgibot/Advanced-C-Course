@@ -20,7 +20,27 @@ int  pop(Stack_St* stack);
 void display(const Stack_St* stack);
 char menu();
 
-
+int main() {
+	Stack_St Stack;
+	int  num;
+	init(&Stack);
+	while (1) {
+		switch (menu()) {
+		case '1': printf("Enter the data: ");
+			scanf("%d", &num);
+			push(&Stack, num);
+			display(&Stack);
+			break;
+		case '2': printf("\n Pop %d",
+			pop(&Stack));
+			display(&Stack);
+			break;
+		case '0': printf("\n Exit ");
+			return(0);
+		default:  printf("\n Wrong. Pls try again");
+		}// switch    
+	} // while
+}// main
 
 
 
@@ -56,15 +76,39 @@ int pop(Stack_St* stack) {
 		printf("\nSTACK  IS EMPTY"); 
 		return;
 	}
-	int res = stack->top->val;
-	stack->top = removeFirst(&(stack->top))//pop it from the stack    
-
-		return(res);
+	int val = stack->top->val;
+	removeFirst(stack); //pop it from the stack    
+	return val;
 }
 
-void removeFirst(node** head) {
-	if (*head == NULL) return; //if stack empty
-	node* tmp = *head;
-	*head = (*head)->next;
+void removeFirst(Stack_St* stack) {
+	node* tmp = stack->top;
+	stack->top = stack->top->next;
 	free(tmp);
+}
+
+void display(Stack_St* S)
+{
+	print(S->top);
+}
+
+
+void print(node* head)
+{
+	node* tmp;
+	tmp = head;
+	while (tmp != NULL) {
+		printf(" % d ", tmp->val);
+		tmp = tmp->next;
+	}
+}
+
+char menu() {
+	printf("\n\t MAIN MENU: \n"
+		"1. Add element to stack \n"
+		"2. Delete element from the stack \n"
+		"0. Exit \n"
+		"\n Your choice: ");
+	fseek(stdin, 0, SEEK_END);
+	return(getchar());
 }
