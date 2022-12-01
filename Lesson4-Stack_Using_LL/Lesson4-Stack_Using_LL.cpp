@@ -19,6 +19,7 @@ void push(Stack_St* stack, int n);
 int  pop(Stack_St* stack);
 void display(const Stack_St* stack);
 char menu();
+void freeMem(Stack_St* stack);
 
 int main() {
 	Stack_St Stack;
@@ -36,6 +37,7 @@ int main() {
 			display(&Stack);
 			break;
 		case '0': printf("\n Exit ");
+			freeMem(&Stack);
 			return(0);
 		default:  printf("\n Wrong. Pls try again");
 		}// switch    
@@ -111,4 +113,11 @@ char menu() {
 		"\n Your choice: ");
 	fseek(stdin, 0, SEEK_END);
 	return(getchar());
+}
+
+void freeMem(Stack_St* stack) {
+	while(!isEmpty(stack)) {
+		removeFirst(stack);
+	}
+	printf("Stack deleted from memory");
 }
