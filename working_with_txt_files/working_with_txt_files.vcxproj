@@ -130,6 +130,7 @@
     <ClCompile Include="working_with_txt_files.c" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="myData.txt" />
     <Text Include="myfile.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
