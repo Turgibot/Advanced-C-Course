@@ -5,11 +5,17 @@
 void example();
 void useFEOF();
 void copyFileExample();
+void printThreeChars();
+void change_members();
 
 void main() {
     //example();
     //useFEOF();
-    copyFileExample();
+    //copyFileExample();
+    printThreeChars();
+    change_members();
+    printThreeChars();
+
 }
 
 void example() {
@@ -72,4 +78,44 @@ void copyFileExample() {
     fclose(fdestination);//close file 
     printf("End of program...\n");
 
+}
+
+void printThreeChars() {
+    FILE* f = fopen("myThrees.txt", "rt");
+    if (!f) {
+        puts("Unable to open file...\n"); exit(1);
+    }
+    char ch_data[4];
+    fseek(f, 0, SEEK_SET); //rewind(f)
+    do {
+        if (fgets(ch_data, 4, f) == NULL)
+            break;
+        printf("%s,", ch_data);
+    } while (1);
+    printf("\n");
+}
+void change_members() {
+    FILE* f = fopen("myThrees.txt", "r+t");
+    if (!f) {
+        puts("Unable to open file...\n"); exit(1);
+    }
+    char ch_data1[4], ch_data2[4];
+    int i, dim;
+    fseek(f, 0, SEEK_END);
+    dim = ftell(f) / 3; //count array members  
+    fseek(f, 0, SEEK_SET); // Go back to file start
+
+    for (i = 0; i < dim / 2; i++) {
+        //find the start of the current member and read it
+        fseek(f, 3 * i, SEEK_SET);
+        fgets(ch_data1, 4, f);
+        //find the start of the symmetrical member and read it
+        fseek(f, -3 * (i + 1), SEEK_END);
+        fgets(ch_data2, 4, f);
+        //write replacement
+        fseek(f, 3 * i, SEEK_SET);        // replace 1
+        fputs(ch_data2, f);
+        fseek(f, -3 * (i + 1), SEEK_END); // replace 2      
+        fputs(ch_data1, f);
+    }//for
 }

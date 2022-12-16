@@ -15,13 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="working_with_txt_files.c">
+    <ClCompile Include="cmd_line_arguments.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="myfile.txt" />
-    <Text Include="myData.txt" />
-    <Text Include="myThrees.txt" />
   </ItemGroup>
 </Project>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{336ba9d5-5344-4dc1-8462-66f7d606716c}</ProjectGuid>
-    <RootNamespace>workingwithtxtfiles</RootNamespace>
+    <ProjectGuid>{be5eb8fc-23e2-41ee-9608-317722769a37}</ProjectGuid>
+    <RootNamespace>cmdlinearguments</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,12 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="working_with_txt_files.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="myData.txt" />
-    <Text Include="myfile.txt" />
-    <Text Include="myThrees.txt" />
+    <ClCompile Include="cmd_line_arguments.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

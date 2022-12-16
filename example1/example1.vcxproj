@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="example1.cpp" />
+    <ClCompile Include="example1.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="myfile.txt" />

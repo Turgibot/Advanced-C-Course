@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{336ba9d5-5344-4dc1-8462-66f7d606716c}</ProjectGuid>
-    <RootNamespace>workingwithtxtfiles</RootNamespace>
+    <ProjectGuid>{cb1fc89a-f330-40d8-9eca-d74789c1e1bb}</ProjectGuid>
+    <RootNamespace>workingwithbinaryfiles</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,12 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="working_with_txt_files.c" />
+    <ClCompile Include="working_with_binary_files.c" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="myData.txt" />
-    <Text Include="myfile.txt" />
-    <Text Include="myThrees.txt" />
+    <None Include="test.bin" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
