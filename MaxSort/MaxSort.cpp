@@ -10,6 +10,10 @@ int comp_int(void* a, void* b)
 {
 	return *(int*)a - *(int*)b;
 }
+int comp_int_desc(void* a, void* b)
+{
+	return *(int*)b - *(int*)a;
+}
 
 int find_max_idx(void* arr, int num_elements, int element_size, comp_fp fp)
 {
@@ -43,11 +47,18 @@ int main()
 {
 	int arr1[] = { 120,55,80,4,-8,0,100 };
 	int n1 = 7;
-	max_sort(arr1, n1, sizeof(int), comp_int); 
+	max_sort(arr1, n1, sizeof(int), comp_int);
 	for (size_t i = 0; i < n1; i++)
 	{
 		printf("%d ", arr1[i]);
 	}
+	printf("\n");
+	max_sort(arr1, n1, sizeof(int), comp_int_desc);
+	for (size_t i = 0; i < n1; i++)
+	{
+		printf("%d ", arr1[i]);
+	}
+
 	return 0;
 }
 
